@@ -10,7 +10,10 @@ Since there were no fully transparent theme, I created one myself.
 [![Release][release-badge]][release-link]
 [![License][license-badge]][license-link]
 
-![Screenshot](screenshots/ss1.jpg)
+## Screenshots
+
+![Screenshot1](screenshots/ss1.jpg)
+![Screenshot2](screenshots/ss2.jpg)
 
 </div>
 
