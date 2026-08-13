@@ -11,6 +11,8 @@ Since there were no fully transparent theme, I created one myself.
 
 [![License][license-badge]][license-link]
 
+![screenshot](https://github.com/h4ry46/Absolute-Transparency/blob/main/screenshots/ss1.jpg)
+
 </div>
 
 ## Installing
