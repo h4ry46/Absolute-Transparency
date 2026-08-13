@@ -7,7 +7,7 @@ Since there were no fully transparent theme, I created one myself.
 [license-link]: https://github.com/h4ry46/Absolute-Transparency/blob/main/LICENSE
 <div align="center">
 
-# Absolute Transparency beta
+# Absolute Transparency
 
 [![License][license-badge]][license-link]
 
