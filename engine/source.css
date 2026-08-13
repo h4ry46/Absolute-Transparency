@@ -1,0 +1,359 @@
+/*
+ * PureGlass Engine
+ * Independent frosted-glass engine for BetterDiscord
+ *
+ * This file is the shared engine/source layer.
+ * Theme files should define the --pg-* variables and import this file.
+ */
+
+:root {
+    /* =========================================================
+       PUREGLASS CORE
+    ========================================================= */
+
+    --pg-bg: rgb(0 0 0 / 18%);
+    --pg-bg-strong: rgb(0 0 0 / 22%);
+    --pg-bg-soft: rgb(0 0 0 / 12%);
+    --pg-bg-floating: rgb(0 0 0 / 34%);
+
+    --pg-blur: 14px;
+    --pg-blur-strong: 20px;
+
+    --pg-border: rgb(255 255 255 / 5%);
+    --pg-hover: rgb(255 255 255 / 5%);
+    --pg-active: rgb(255 255 255 / 8%);
+    --pg-selected: rgb(255 255 255 / 10%);
+
+    --pg-shadow: 0 12px 40px rgb(0 0 0 / 25%);
+
+    --pg-server-bg: var(--pg-bg);
+    --pg-sidebar-bg: var(--pg-bg);
+    --pg-chat-bg: var(--pg-bg);
+    --pg-members-bg: var(--pg-bg);
+
+    --pg-input-bg: rgb(255 255 255 / 6%);
+
+    /* Set to 0 if the Discord client already provides the
+       correct background compositing for your setup. */
+    --pg-overlay-opacity: 1;
+}
+
+
+/* =========================================================
+   BACKGROUND / APP
+========================================================= */
+
+html,
+body,
+#app-mount {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+#app-mount > div {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+
+/* =========================================================
+   SHARED GLASS MIXIN
+   CSS cannot define real mixins, so these selectors share
+   the same engine rules.
+========================================================= */
+
+[class*="guilds-"],
+[class*="sidebar-"],
+[class*="sidebarList-"],
+[class*="chat-"],
+[class*="chatContent-"],
+[class*="membersWrap-"],
+[class*="members-"],
+[class*="panels-"] {
+    border-color: var(--pg-border) !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   SERVER LIST
+========================================================= */
+
+[class*="guilds-"] {
+    background: var(--pg-server-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+}
+
+
+/* =========================================================
+   CHANNEL SIDEBAR
+========================================================= */
+
+[class*="sidebar-"],
+[class*="sidebarList-"] {
+    background: var(--pg-sidebar-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+}
+
+
+/* Keep channel contents transparent so the parent glass layer
+   remains visible instead of stacking opaque backgrounds. */
+
+[class*="sidebar-"] [class*="content-"],
+[class*="sidebar-"] [class*="container-"] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+
+/* =========================================================
+   CHAT
+========================================================= */
+
+[class*="chat-"],
+[class*="chatContent-"],
+[class*="page-"],
+[class*="tabBody-"] {
+    background: var(--pg-chat-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+}
+
+
+/* Message area itself stays transparent. */
+
+[class*="messagesWrapper-"],
+[class*="scroller-"],
+[class*="scrollerInner-"] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+[class*="message-"] {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+[class*="message-"]:hover {
+    background: var(--pg-hover) !important;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header,
+[class*="header-"] {
+    background: var(--pg-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+
+    border-color: var(--pg-border) !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   MEMBER LIST
+========================================================= */
+
+[class*="membersWrap-"],
+[class*="members-"] {
+    background: var(--pg-members-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+}
+
+[class*="members-"] > [class*="content-"] {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   USER / ACCOUNT PANEL
+========================================================= */
+
+[class*="panels-"] {
+    background: var(--pg-sidebar-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+}
+
+
+/* =========================================================
+   TEXT INPUT
+========================================================= */
+
+[class*="channelTextArea-"] {
+    background: var(--pg-input-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+
+    border-color: var(--pg-border) !important;
+    box-shadow: none !important;
+}
+
+[class*="scrollableContainer-"] {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+[class*="searchBar-"] {
+    background: var(--pg-input-bg) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+
+    border-color: var(--pg-border) !important;
+}
+
+
+/* =========================================================
+   POPOUTS / MENUS
+========================================================= */
+
+[class*="popout-"],
+[class*="menu-"],
+[class*="layer-"] [role="menu"] {
+    background: var(--pg-bg-floating) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur-strong));
+    -webkit-backdrop-filter: blur(var(--pg-blur-strong));
+
+    border-color: var(--pg-border) !important;
+    box-shadow: var(--pg-shadow) !important;
+}
+
+[role="menuitem"]:hover,
+[class*="item-"]:hover {
+    background: var(--pg-hover) !important;
+}
+
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+[class*="modal-"] {
+    background: var(--pg-bg-floating) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur-strong));
+    -webkit-backdrop-filter: blur(var(--pg-blur-strong));
+
+    border-color: var(--pg-border) !important;
+    box-shadow: var(--pg-shadow) !important;
+}
+
+
+/* =========================================================
+   CARDS / EMBEDS
+========================================================= */
+
+[class*="card-"],
+[class*="embed-"] {
+    background: var(--pg-bg-soft) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+
+    border-color: var(--pg-border) !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+
+[class*="tooltip-"] {
+    background: rgb(0 0 0 / 60%) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(var(--pg-blur));
+    -webkit-backdrop-filter: blur(var(--pg-blur));
+
+    box-shadow: var(--pg-shadow) !important;
+}
+
+
+/* =========================================================
+   SELECTION / HOVER
+   Only neutral glass states are controlled here.
+   Discord's native brand/role colors are intentionally not
+   overridden.
+========================================================= */
+
+[class*="modeSelected-"] {
+    background: var(--pg-selected) !important;
+}
+
+[class*="wrapper-"]:hover,
+[class*="link-"]:hover {
+    background: var(--pg-hover) !important;
+}
+
+
+/* =========================================================
+   REMOVE OPAQUE BACKGROUND LAYERS
+========================================================= */
+
+[class*="bg-"],
+[class*="base-"],
+[class*="content-"] {
+    background-image: none !important;
+}
+
+
+/* =========================================================
+   NATIVE COLORS
+   Do not modify usernames, roles, mentions, buttons, or
+   Discord's native accent colors.
+========================================================= */
+
+[class*="username-"],
+[class*="name-"],
+[class*="role-"],
+[class*="mention-"],
+[class*="button-"] {
+    filter: none !important;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+[class*="message-"]:focus,
+[class*="message-"]:focus-visible {
+    outline: none !important;
+}
