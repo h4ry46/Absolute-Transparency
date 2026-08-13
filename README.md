@@ -1,7 +1,7 @@
 # Absolute-Transparency
 Since there were no fully transparent theme, I created one myself.
 
-[release-badge]: https://img.shields.io/badge/Release-vc--0.0.1b-blue
+[release-badge]: https://img.shields.io/badge/Release-v1.0.0-blue
 [release-link]: https://github.com/h4ry46/Absolute-Transparency/releases
 [license-badge]: https://img.shields.io/badge/License-Apache--2.0-green
 [license-link]: https://github.com/h4ry46/Absolute-Transparency/blob/main/LICENSE
