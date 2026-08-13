@@ -7,7 +7,7 @@ Since there were no fully transparent theme, I created one myself.
 [license-link]: https://github.com/h4ry46/Absolute-Transparency/blob/main/LICENSE
 <div align="center">
 
-# Absolut Transparency beta
+# Absolute Transparency beta
 
 [![License][license-badge]][license-link]
 
@@ -17,7 +17,7 @@ Since there were no fully transparent theme, I created one myself.
 
 Requirements:
 - Windows 11 22H2 or above
-- [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass) installed
+- [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass) installed and configured like [this](https://github.com/h4ry46/Absolute-Transparency/blob/main/DWM-config.png)
 
 **For BetterDiscord and Vencord:**
 
