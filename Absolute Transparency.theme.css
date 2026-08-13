@@ -1,0 +1,504 @@
+/**
+ * @name Absolute Transparency
+ * @version 1.0.0
+ * @author h4rry46
+ * @source https://github.com/h4ry46/Absolute-Transparency
+ * @description Transparent Discord with uniform frosted glass and native Discord colors
+ * @website https://github.com/h4ry46/Absolute-Transparency
+ */
+
+/* =========================================================
+   TRANSLUCENCE ENGINE
+   Dùng engine để Discord được xử lý transparency đúng cách
+========================================================= */
+
+@import url("https://h4ry46.github.io/Absolute-Transparency/engine/source.css");
+
+
+/* =========================================================
+   GLOBAL SETTINGS
+========================================================= */
+
+:root,
+.theme-dark,
+.theme-light {
+
+    /* -----------------------------------------------------
+       MAIN GLASS COLORS
+       Tất cả khu vực dùng cùng một tone
+    ----------------------------------------------------- */
+
+    --background-primary: rgb(0 0 0 / 18%) !important;
+    --background-secondary: rgb(0 0 0 / 20%) !important;
+    --background-secondary-alt: rgb(0 0 0 / 20%) !important;
+    --background-tertiary: rgb(0 0 0 / 22%) !important;
+    --background-floating: rgb(0 0 0 / 38%) !important;
+
+    /* Discord newer variables */
+
+    --bg-base-primary: rgb(0 0 0 / 18%) !important;
+    --background-base-lowest: rgb(0 0 0 / 15%) !important;
+    --background-base-lower: rgb(0 0 0 / 18%) !important;
+    --background-base-low: rgb(0 0 0 / 20%) !important;
+
+    --home-background: rgb(0 0 0 / 15%) !important;
+
+
+    /* -----------------------------------------------------
+       GLASS
+    ----------------------------------------------------- */
+
+    --app-bg: none !important;
+    --app-blur: 12px !important;
+    --app-margin: 0px !important;
+    --app-radius: 0px !important;
+
+	/* =========================================================
+	   ROUNDED APP
+	========================================================= */
+
+	#app-mount {
+		border-radius: 16px !important;
+		overflow: hidden !important;
+	}
+    /* -----------------------------------------------------
+       UNIFORM GLASS LAYERS
+    ----------------------------------------------------- */
+
+    --sidebar-color: rgb(0 0 0 / 20%) !important;
+    --main-content-color: rgb(0 0 0 / 18%) !important;
+
+    --message-color: rgb(0 0 0 / 5%) !important;
+    --message-color-hover: rgb(255 255 255 / 5%) !important;
+
+    --card-color: rgb(0 0 0 / 10%) !important;
+    --card-color-hover: rgb(255 255 255 / 5%) !important;
+    --card-color-select: rgb(255 255 255 / 8%) !important;
+
+
+    /* -----------------------------------------------------
+       POPOUTS
+    ----------------------------------------------------- */
+
+    --popout-color: rgb(0 0 0 / 32%) !important;
+    --popout-blur: 18px !important;
+
+    --popout-shadow:
+        0 12px 40px rgb(0 0 0 / 30%) !important;
+
+    --popout-shadow-border: none !important;
+
+
+    /* -----------------------------------------------------
+       HOVER / SELECTED
+       Neutral, KHÔNG tím
+    ----------------------------------------------------- */
+
+    --background-modifier-hover:
+        rgb(255 255 255 / 5%) !important;
+
+    --background-modifier-active:
+        rgb(255 255 255 / 8%) !important;
+
+    --background-modifier-selected:
+        rgb(255 255 255 / 10%) !important;
+
+    --background-modifier-accent:
+        rgb(255 255 255 / 8%) !important;
+
+
+    /* -----------------------------------------------------
+       DISABLE LIQUID GLASS GLOW
+    ----------------------------------------------------- */
+
+    --liquid-glass-shadow: none !important;
+}
+
+
+/* =========================================================
+   REMOVE PURPLE / CUSTOM THEME GLOW
+========================================================= */
+
+:root {
+    --theme-background-color: transparent !important;
+}
+
+
+/* =========================================================
+   APP BACKGROUND
+========================================================= */
+
+html,
+body,
+#app-mount,
+.appMount,
+.app-2CXKsg,
+[class*="app-"] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+
+/* =========================================================
+   MAIN DISCORD BACKGROUND
+========================================================= */
+
+[class*="bg-"] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+
+/* =========================================================
+   SERVER LIST
+   Cùng độ trong với channel sidebar
+========================================================= */
+
+[class*="guilds-"] {
+    background: rgb(0 0 0 / 20%) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   CHANNEL SIDEBAR
+========================================================= */
+
+[class*="sidebar-"],
+[class*="sidebarList-"] {
+    background: rgb(0 0 0 / 20%) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   CHANNEL LIST CONTENT
+========================================================= */
+
+[class*="content-"],
+[class*="containerDefault-"],
+[class*="containerDragAfter-"],
+[class*="containerDragBefore-"] {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   MAIN CHAT
+========================================================= */
+
+[class*="chat-"],
+[class*="chatContent-"],
+[class*="page-"],
+[class*="tabBody-"] {
+    background: rgb(0 0 0 / 18%) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   CHAT SCROLLER
+========================================================= */
+
+[class*="chatContent-"] > [class*="scroller-"],
+[class*="messagesWrapper-"],
+[class*="scrollerInner-"] {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+[class*="message-"] {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* Message hover */
+
+[class*="message-"]:hover {
+    background: rgb(255 255 255 / 4%) !important;
+}
+
+
+/* =========================================================
+   MEMBER LIST
+========================================================= */
+
+[class*="membersWrap-"],
+[class*="members-"] {
+    background: rgb(0 0 0 / 20%) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* Member list inner */
+
+[class*="members-"] > [class*="content-"] {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+[class*="header-"] {
+    background: rgb(0 0 0 / 18%) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   MESSAGE INPUT
+========================================================= */
+
+[class*="channelTextArea-"] {
+    background: rgb(255 255 255 / 6%) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* Input inner */
+
+[class*="scrollableContainer-"] {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   USER PANEL
+========================================================= */
+
+[class*="panels-"] {
+    background: rgb(0 0 0 / 20%) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+[class*="searchBar-"] {
+    background: rgb(255 255 255 / 6%) !important;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: none !important;
+}
+
+
+/* =========================================================
+   POPOUTS
+========================================================= */
+
+[class*="popout-"],
+[class*="layer-"] [role="menu"] {
+    background: rgb(0 0 0 / 34%) !important;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: none !important;
+
+    box-shadow:
+        0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+
+/* =========================================================
+   MENUS
+========================================================= */
+
+[class*="menu-"] {
+    background: rgb(0 0 0 / 34%) !important;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: none !important;
+}
+
+
+/* Menu hover */
+
+[role="menuitem"]:hover,
+[class*="item-"]:hover {
+    background: rgb(255 255 255 / 7%) !important;
+}
+
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+[class*="modal-"] {
+    background: rgb(0 0 0 / 34%) !important;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: none !important;
+
+    box-shadow:
+        0 20px 60px rgb(0 0 0 / 35%) !important;
+}
+
+
+/* =========================================================
+   CARDS / EMBEDS
+========================================================= */
+
+[class*="card-"],
+[class*="embed-"] {
+    background: rgb(0 0 0 / 12%) !important;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+
+[class*="tooltip-"] {
+    background: rgb(0 0 0 / 60%) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: none !important;
+
+    box-shadow:
+        0 8px 30px rgb(0 0 0 / 30%) !important;
+}
+
+
+/* =========================================================
+   SELECTED CHANNEL
+   Không thêm màu tím
+========================================================= */
+
+[class*="modeSelected-"] {
+    background: rgb(255 255 255 / 9%) !important;
+}
+
+
+/* =========================================================
+   CHANNEL HOVER
+========================================================= */
+
+[class*="wrapper-"]:hover,
+[class*="link-"]:hover {
+    background: rgb(255 255 255 / 5%) !important;
+}
+
+
+/* =========================================================
+   SERVER SELECTED
+========================================================= */
+
+[class*="selected-"] {
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   REMOVE UNNECESSARY BORDERS
+========================================================= */
+
+[class*="guilds-"],
+[class*="sidebar-"],
+[class*="chat-"],
+[class*="membersWrap-"],
+[class*="members-"],
+[class*="panels-"],
+[class*="header-"],
+[class*="channelTextArea-"] {
+    border-color: rgb(255 255 255 / 5%) !important;
+}
+
+
+/* =========================================================
+   DISABLE PURPLE BOX SHADOW / OUTLINE
+========================================================= */
+
+[class*="message-"]:focus,
+[class*="message-"]:focus-visible {
+    outline: none !important;
+}
+
+
+/* =========================================================
+   ROLE / USERNAME / DISCORD NATIVE COLORS
+   Không filter màu chữ
+========================================================= */
+
+[class*="username-"],
+[class*="name-"],
+[class*="role-"],
+[class*="mention-"] {
+    filter: none !important;
+}
+
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+img[class*="bannerImg-"] {
+    border-radius: 0 0 1em 1em !important;
+}
+
+
+/* =========================================================
+   DARKREADER
+========================================================= */
+
+:root {
+    --darkreader-background-ffffff: transparent !important;
+}
