@@ -9,17 +9,27 @@ Since there were no fully transparent theme, I created one myself.
 
 # Absolute Transparency
 
+[![Release][release-badge]][release-link]
 [![License][license-badge]][license-link]
 
-![screenshot](https://github.com/h4ry46/Absolute-Transparency/blob/main/screenshots/ss1.jpg)
+![Screenshot](screenshots/ss1.jpg)
 
 </div>
+
+## Features
+
+- Fully transparent Discord interface
+- Frosted glass / blur effect
+- Customizable transparency and blur
+- Supports [BetterDiscord](https://betterdiscord.app/)
+- Supports [Vencord](https://vencord.dev/)
 
 ## Installing
 
 Requirements:
-- Windows 11 22H2 or above
-- [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass) installed and configured like [this](https://github.com/h4ry46/Absolute-Transparency/blob/main/DWM-config.png)
+- Windows 11 22H2 or later
+- [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass)
+- DWMBlurGlass configured according to [this configuration](DWM-config.png)
 
 **For BetterDiscord and Vencord:**
 
@@ -31,5 +41,3 @@ Download the theme file from  [releases][release-link] and move it into your inj
 **For using the theme online:**
 
 If your client offers using an online version. Use this link `https://raw.githubusercontent.com/h4ry46/Absolute-Transparency/refs/heads/main/Absolute%20Transparency.theme.css`
-
-For customizing the theme from there, you'll want to use custom css and add any variables you'd like to change.
