@@ -1,4 +1,4 @@
-[release-badge]: https://img.shields.io/badge/Release-v1.0.0-blue
+[release-badge]: https://img.shields.io/badge/Release-v1.0.1-blue
 [release-link]: https://github.com/h4ry46/Absolute-Transparency/releases
 [license-badge]: https://img.shields.io/badge/License-Apache--2.0-green
 [license-link]: https://github.com/h4ry46/Absolute-Transparency/blob/main/LICENSE
