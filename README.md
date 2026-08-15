@@ -25,6 +25,11 @@ Since there were no fully transparent theme, I created one myself.
 - Supports [BetterDiscord](https://betterdiscord.app/)
 - Supports [Vencord](https://vencord.dev/)
 
+## IMPORTANT
+
+You need to enable the [Enable Transparency in BetterDiscord](screenshots/BetterDiscord.jpg) / Vencord settings for this theme to work well
+BetterDiscord Settings > WINDOW PREFERENCES > Enable Transparency and then restart Discordd
+
 ## Installing
 
 Requirements:
@@ -32,18 +37,9 @@ Requirements:
 - [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass)
 - DWMBlurGlass configured according to [this configuration](DWM-config.png)
 
-## IMPORTANT
-
-You need to enable the [Enable Transparency in BetterDiscord](screenshots/BetterDiscord.jpg) / Vencord settings for this theme to work well
-BetterDiscord Settings > WINDOW PREFERENCES > Enable Transparency
-
-**For BetterDiscord and Vencord:**
-
-Download the theme file from  [releases][release-link] and move it into your injector's themes folder:
-
+**Download the theme file from  [releases][release-link] and move it into your injector's themes folder:**
 - BetterDiscord: `%appdata%\betterdiscord\themes`
 - Vencord: `%appdata%\vencord\themes`
 
 **For using the theme online:**
-
 If your client offers using an online version. Use this link `https://raw.githubusercontent.com/h4ry46/Absolute-Transparency/refs/heads/main/Absolute%20Transparency.theme.css`
