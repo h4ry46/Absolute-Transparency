@@ -32,6 +32,11 @@ Requirements:
 - [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass)
 - DWMBlurGlass configured according to [this configuration](DWM-config.png)
 
+## IMPORTANT
+
+You need to enable the [Enable Transparency in BetterDiscord](screenshots/BetterDiscord.jpg) / Vencord settings for this theme to work well
+BetterDiscord Settings > WINDOW PREFERENCES > Enable Transparency
+
 **For BetterDiscord and Vencord:**
 
 Download the theme file from  [releases][release-link] and move it into your injector's themes folder:
