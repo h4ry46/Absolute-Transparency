@@ -99,8 +99,7 @@ Make sure that:
 
 * Discord Transparency is enabled.
 * You restarted Discord after enabling Transparency.
-* DWMBlurGlass is installed and match [`DWM-config.png`](DWM-config.png).
-* DWMBlurGlass is configured correctly using [`DWM-config.png`](DWM-config.png).
+* DWMBlurGlass is installed and configured correctly using [`DWM-config.png`](DWM-config.png).
 * You are running Windows 11 22H2 or newer.
 
 ## 📄 License
