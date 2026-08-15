@@ -28,6 +28,7 @@ Since there were no fully transparent theme, I created one myself.
 ## IMPORTANT
 
 You need to enable the [Enable Transparency in BetterDiscord](screenshots/BetterDiscord.jpg) / Vencord settings for this theme to work well
+
 BetterDiscord Settings > WINDOW PREFERENCES > Enable Transparency and then restart Discordd
 
 ## Installing
