@@ -1,6 +1,6 @@
 /**
  * @name Absolute Transparency
- * @version 1.0.0
+ * @version 1.0.1
  * @author h4rry46
  * @source https://github.com/h4ry46/Absolute-Transparency
  * @description Transparent Discord with uniform frosted glass and native Discord colors
@@ -60,6 +60,7 @@
 	#app-mount {
 		border-radius: 16px !important;
 		overflow: hidden !important;
+        transform: translateZ(0);
 	}
     /* -----------------------------------------------------
        UNIFORM GLASS LAYERS
@@ -501,4 +502,194 @@ img[class*="bannerImg-"] {
 
 :root {
     --darkreader-background-ffffff: transparent !important;
+}
+
+
+/* =========================================================
+   PROFILE POPOUT — card game/voice (KHÔNG backdrop-filter
+   để tránh phá submenu status)
+========================================================= */
+
+[class^="overlay_"]:not([class*="menuOverlay_"]),
+[class*=" overlay_"]:not([class*="menuOverlay_"]) {
+    background: rgb(0 0 0 / 30%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+    /* KHÔNG dùng backdrop-filter ở đây */
+}
+
+
+/* =========================================================
+   MENU (Edit Profile / Status / Switch Accounts)
+========================================================= */
+
+[class^="menuOverlay_"],
+[class*=" menuOverlay_"] {
+    background: rgb(0 0 0 / 34%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+[class^="popoutContainer_"],
+[class*=" popoutContainer_"] {
+    background: rgb(0 0 0 / 32%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+/* =========================================================
+   OUTER CONTAINER — nền tổng thể của cả popup
+========================================================= */
+
+[class*="themeContainer_"] {
+    background: rgb(0 0 0 / 75%) !important;
+    background-image: none !important;
+    border: none !important;
+}
+
+
+/* =========================================================
+   PROFILE POPOUT — card game/voice
+========================================================= */
+
+[class^="overlay_"]:not([class*="menuOverlay_"]),
+[class*=" overlay_"]:not([class*="menuOverlay_"]) {
+    background: rgb(0 0 0 / 20%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+
+/* =========================================================
+   MENU (Edit Profile / Status / Switch Accounts)
+========================================================= */
+
+[class^="menuOverlay_"],
+[class*=" menuOverlay_"] {
+    background: rgb(0 0 0 / 22%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+[class^="popoutContainer_"],
+[class*=" popoutContainer_"] {
+    background: rgb(0 0 0 / 20%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+[class*="themeContainer_"] {
+    background: rgb(0 0 0 / 45%) !important;
+    background-image: none !important;
+    border: none !important;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* =========================================================
+   OUTER CONTAINER — nền tổng thể của cả popup (có blur)
+========================================================= */
+
+[class*="themeContainer_"] {
+    background: rgb(0 0 0 / 45%) !important;
+    background-image: none !important;
+    border: none !important;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* =========================================================
+   PROFILE POPOUT — card game/voice
+   (KHÔNG backdrop-filter để tránh phá submenu status)
+========================================================= */
+
+[class^="overlay_"]:not([class*="menuOverlay_"]),
+[class*=" overlay_"]:not([class*="menuOverlay_"]) {
+    background: rgb(0 0 0 / 20%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+
+/* =========================================================
+   MENU (Edit Profile / Status / Switch Accounts)
+========================================================= */
+
+[class^="menuOverlay_"],
+[class*=" menuOverlay_"] {
+    background: rgb(0 0 0 / 22%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+[class^="popoutContainer_"],
+[class*=" popoutContainer_"] {
+    background: rgb(0 0 0 / 20%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+
+/* Không đụng icon mũi tên / icon trong item */
+[class^="menuItemIcon_"],
+[class*=" menuItemIcon_"],
+[class^="submenuIconWrapper_"],
+[class*=" submenuIconWrapper_"] {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* =========================================================
+   STATUS MENU (Online/Idle/DND/Invisible) — KHÔNG backdrop-filter
+   vì đây là ancestor của submenu con "For 15 Minutes..."
+========================================================= */
+
+[class^="menu_"][role="menu"],
+[class*=" menu_"][role="menu"] {
+    background: rgb(0 0 0 / 60%) !important;
+    background-image: none !important;
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
+}
+
+
+/* =========================================================
+   SUBMENU CON (For 15 Minutes/For 1 Hour...) — an toàn để blur
+   vì đây là lá, không chứa gì lồng bên trong
+========================================================= */
+
+[class^="submenu_"][role="menu"],
+[class*=" submenu_"][role="menu"] {
+    background: rgb(0 0 0 / 34%) !important;
+    background-image: none !important;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: none !important;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 30%) !important;
 }
