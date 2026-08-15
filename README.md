@@ -2,10 +2,12 @@
 [release-link]: https://github.com/h4ry46/Absolute-Transparency/releases
 [license-badge]: https://img.shields.io/badge/License-Apache--2.0-green
 [license-link]: https://github.com/h4ry46/Absolute-Transparency/blob/main/LICENSE
+
 <div align="center">
 
 # Absolute Transparency
-Since there were no fully transparent theme, I created one myself.
+
+A fully transparent and frosted-glass theme for Discord.
 
 [![Release][release-badge]][release-link]
 [![License][license-badge]][license-link]
@@ -17,30 +19,94 @@ Since there were no fully transparent theme, I created one myself.
 
 </div>
 
-## Features
+## ✨ Features
 
-- Fully transparent Discord interface
-- Frosted glass / blur effect
-- Customizable transparency and blur
-- Supports [BetterDiscord](https://betterdiscord.app/)
-- Supports [Vencord](https://vencord.dev/)
+* Fully transparent Discord interface
+* Frosted glass / blur effect
+* Customizable transparency and blur
+* Works with [BetterDiscord](https://betterdiscord.app/)
+* Works with [Vencord](https://vencord.dev/)
 
-## IMPORTANT
+## ⚠️ Requirements
 
-You need to enable the [Enable Transparency in BetterDiscord](screenshots/BetterDiscord.jpg) / Vencord settings for this theme to work well
+Before installing the theme, you need:
 
-BetterDiscord Settings > WINDOW PREFERENCES > Enable Transparency and then restart Discord
+* **Windows 11 22H2 or newer**
+* [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass)
+* [BetterDiscord](https://betterdiscord.app/) or [Vencord](https://vencord.dev/)
 
-## Installing
+You also need to configure DWMBlurGlass using [`DWM-config.png`](DWM-config.png).
 
-Requirements:
-- Windows 11 22H2 or later
-- [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass)
-- DWMBlurGlass configured according to [this configuration](DWM-config.png)
+## 🔧 Setup
 
-**Download the theme file from  [releases][release-link] and move it into your injector's themes folder:**
-- BetterDiscord: `%appdata%\betterdiscord\themes`
-- Vencord: `%appdata%\vencord\themes`
+### 1. Configure DWMBlurGlass
 
-**For using the theme online:**
-If your client offers using an online version. Use this link `https://raw.githubusercontent.com/h4ry46/Absolute-Transparency/refs/heads/main/Absolute%20Transparency.theme.css`
+Install [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass).
+
+After installing it, open and configure it to match the settings shown in [`DWM-config.png`](DWM-config.png) or as you liked.
+
+### 2. Enable Transparency in Discord
+
+**This step is required for the theme to work correctly.**
+
+#### BetterDiscord
+
+Go to:
+
+**Settings → Window Preferences → Enable Transparency**
+
+Enable **Enable Transparency**, then restart Discord.
+
+#### Vencord
+
+Open Vencord settings and find the **Enable Transparency** option to enable it.
+
+Then restart Discord.
+
+## 📥 Installing
+
+### BetterDiscord
+
+1. Download the theme from the [Releases][release-link] page.
+2. Press `Win + R`.
+3. Paste:
+   `%appdata%\betterdiscord\themes`
+4. Press **Enter**.
+5. Move the downloaded `Absolute Transparency.theme.css` file into this folder.
+6. Open Discord and enable **Absolute Transparency** in **BetterDiscord → Themes**.
+
+### Vencord
+
+1. Download the theme from the [Releases][release-link] page.
+2. Press `Win + R`.
+3. Paste:
+   `%appdata%\vencord\themes`
+4. Press **Enter**.
+5. Move the downloaded `Absolute Transparency.theme.css` file into this folder.
+6. Open Discord and enable **Absolute Transparency** in **Vencord → Themes**.
+
+## 🌐 Online Version
+
+If your Discord client supports installing themes using a URL, you can use the online version:
+
+`https://raw.githubusercontent.com/h4ry46/Absolute-Transparency/refs/heads/main/Absolute%20Transparency.theme.css`
+
+## ❓ Troubleshooting
+
+### Discord is not transparent
+
+Make sure that:
+
+* Discord Transparency is enabled.
+* You restarted Discord after enabling Transparency.
+* DWMBlurGlass is installed and running.
+* DWMBlurGlass is configured correctly using [`DWM-config.png`](DWM-config.png).
+* You are running Windows 11 22H2 or newer.
+
+### Blur effect is not working
+
+Check your DWMBlurGlass settings and make sure they match [`DWM-config.png`](DWM-config.png).
+
+## 📄 License
+
+This project is licensed under the [Apache-2.0 License][license-link].
