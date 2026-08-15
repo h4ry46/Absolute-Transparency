@@ -99,13 +99,9 @@ Make sure that:
 
 * Discord Transparency is enabled.
 * You restarted Discord after enabling Transparency.
-* DWMBlurGlass is installed and running.
+* DWMBlurGlass is installed and match [`DWM-config.png`](DWM-config.png).
 * DWMBlurGlass is configured correctly using [`DWM-config.png`](DWM-config.png).
 * You are running Windows 11 22H2 or newer.
-
-### Blur effect is not working
-
-Check your DWMBlurGlass settings and make sure they match [`DWM-config.png`](DWM-config.png).
 
 ## 📄 License
 
